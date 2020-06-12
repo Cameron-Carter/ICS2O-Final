@@ -1,0 +1,70 @@
+.body {
+  background-color:darkolivegreen;
+  color:white;
+  font-family:"Comic Sans MS", cursive, sans-serif;
+}
+
+.h1 {
+  font-size:48px;
+  text-align:center;
+}
+.form {
+  position:absolute;
+  left:40px;
+  top:200px;
+  font-size:36px;
+}
+.input, .btn1, .btn2 {
+  background-color:olive;
+  font-size:18px;
+  font-family:"Comic Sans MS", cursive, sans-serif;
+}
+.btn2 {
+  position:fixed;
+  left:40px;
+  top:40px;
+}
+.h2 {
+  position:fixed;
+  left:40px;
+  bottom:200px;
+}
+.h3 {
+  position:fixed;
+  left:500px;
+  bottom:250px;
+  font-size:200%;
+}
+.l1, .l2, .l3, .l4, .l5 {
+  position:fixed;
+  bottom:265px;
+  font-size:72px;
+}
+.l1 {
+    left:510px;
+}
+.l2 {
+    left:585px;
+}
+.l3 {
+    left:660px;
+}
+.l4 {
+    left:735px;
+}
+.l5 {
+    left:810px;
+}
+.hanger {
+  position:absolute;
+  top:10px;
+  right:10px;
+  border:ridge dimgray 12px;
+}
+.hangman, .hangman2, .hangman3, .hangman4, .hangman5, .hangman6, .hangman7{
+  height:50%;
+  position:absolute;
+  top:135px;
+  right:155px;
+  display:none;
+}
