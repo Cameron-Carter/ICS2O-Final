@@ -22,7 +22,7 @@
 .btn2 {
   position:fixed;
   left:40px;
-  top:40px;
+  bottom:40px;
 }
 .h2 {
   position:fixed;
@@ -34,6 +34,11 @@
   left:500px;
   bottom:250px;
   font-size:200%;
+}
+.p {
+  position:fixed;
+  left:40px;
+  bottom:160px;
 }
 .l1, .l2, .l3, .l4, .l5 {
   position:fixed;
