@@ -1,14 +1,8 @@
 // JavaScript File
 // let statements
 let myGuess;
-let letterOne;
-const letterTwo = document.getElementById("l2").value;
-const letterThree = document.getElementById("l3").value;
-const letterFour = document.getElementById("l4").value;
-const letterFive = document.getElementById("l5").value;
-const words = ["pizza", "towel"];
+const words = ["tentacles"];
 const randomWord = words[Math.floor(Math.random() * words.length)];
-let wrongGuessList = document.getElementById("letterlist").value;
 let letterIndex;
 let letterOutput;
 const maxMistakes = 7;
@@ -47,9 +41,10 @@ function guess() {
   rightGuess = 0;
   wrongGuess = 0;
   // if there is no input, the user is told to type in a letter
-  if (myGuess == 0) {
+  if (myGuess.length !== 1) {
     alert("Please enter a valid letter.");
   }
+  else {
   //loops through the word starting from the beginning, then from the second letter, so on so forth until it has been looped through starting from each letter
   for (let i = 0; i < randomWord.length; i++) {
     //sets value of letterIndex to to position of the guessed letter in the word
@@ -63,20 +58,35 @@ function guess() {
     
     if (letterIndex == 0) {
         document.getElementById("l1").innerHTML = letterOutput;
-      }
-      else if (letterIndex == 1) {
-        document.getElementById("l2").innerHTML = letterOutput;
-      }
-      else if (letterIndex == 2) {
-        document.getElementById("l3").innerHTML = letterOutput;
-      }
-      else if (letterIndex == 3) {
-        document.getElementById("l4").innerHTML = letterOutput;
-      }
-      else if (letterIndex == 4) {
-        document.getElementById("l5").innerHTML = letterOutput;
-      }
-      //
+    }
+    else if (letterIndex == 1) {
+      document.getElementById("l2").innerHTML = letterOutput;
+    }
+    else if (letterIndex == 2) {
+      document.getElementById("l3").innerHTML = letterOutput;
+    }
+    else if (letterIndex == 3) {
+      document.getElementById("l4").innerHTML = letterOutput;
+    }
+    else if (letterIndex == 4) {
+      document.getElementById("l5").innerHTML = letterOutput;
+    }
+    else if (letterIndex == 5) {
+      document.getElementById("l6").innerHTML = letterOutput;
+    }
+    else if (letterIndex == 6) {
+      document.getElementById("l7").innerHTML = letterOutput;
+    }
+    else if (letterIndex == 7) {
+      document.getElementById("l8").innerHTML = letterOutput;
+    }
+    else if (letterIndex == 8) {
+      document.getElementById("l9").innerHTML = letterOutput;
+    }
+    else if (letterIndex == 9) {
+      document.getElementById("l10").innerHTML = letterOutput;
+    }
+  //
       
     }
     //
@@ -154,24 +164,40 @@ function guess() {
       
     }
       //}
-    //}
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
+// function to change how many underscores are displayed based on letter count in word
+function underscores() {
+  if (randomWord.length == 3) {
+    document.getElementById("h3").innerHTML = "_ _ _";
+  }
+  else if (randomWord.length == 4) {
+    document.getElementById("h3").innerHTML = "_ _ _ _";
+  }
+  else if (randomWord.length == 5) {
+    document.getElementById("h3").innerHTML = "_ _ _ _ _";
+  }
+  else if (randomWord.length == 6) {
+    document.getElementById("h3").innerHTML = "_ _ _ _ _ _";
+  }
+  else if (randomWord.length == 7) {
+    document.getElementById("h3").innerHTML = "_ _ _ _ _ _ _";
+  }
+  else if (randomWord.length == 8) {
+    document.getElementById("h3").innerHTML = "_ _ _ _ _ _ _ _";
+  }
+  else if (randomWord.length == 9) {
+    document.getElementById("h3").innerHTML = "_ _ _ _ _ _ _ _ _";
+  }
+  else if (randomWord.length == 10) {
+    document.getElementById("h3").innerHTML = "_ _ _ _ _ _ _ _ _ _";
+  }
+}
 
 
 // event listener that triggers the guess function when the button is pressed
 document.getElementById("btn1").addEventListener("click", guess);
 // event listener for new game button that reloads page
 //document.getElementById("btn2").addEventListener("click", reload);
-// event listener that starts game when page is loaded
+//
+window.addEventListener("load", underscores);
