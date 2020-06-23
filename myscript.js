@@ -1,13 +1,13 @@
 // JavaScript File
 // let statements
 let myGuess;
-const words = ["stalagmite"];
+const words = ["cow", "fog", "cab", "gas", "cup", "bed", "pen", "act", "spy", "sky", "ink", "hug", "end", "can", "sub", "bus", "pet", "why", "old", "den", "hour", "left", "when", "play", "skip", "draw", "sink", "ally", "grow", "cast", "mint", "lava", "path", "yard", "envy", "edit", "boil", "wand", "wave", "flea", "scar", "towel", "pizza", "sheep", "think", "trunk", "print", "bands", "cards", "spoon", "crisp", "green", "board", "brave", "storm", "grape", "flame", "level", "blend", "spree", "trees", "blood", "galaxy", "oxygen", "defend", "rhythm", "zodiac", "casual", "sunset", "castle", "zombie", "phlegm", "hunter", "tragic", "island", "wrench", "charge", "menace", "reveal", "review", "unwind", "unveil", "discard", "prowess", "villain", "carrots", "glasses", "surface", "folding", "subject", "rhythms", "ranking", "contest", "sheilds", "archery", "creator", "plastic", "cryptic", "passage", "quickly", "reverse", "weather", "scorpion", "powerful", "cupboard", "blizzard", "abruptly", "strength", "triangle", "twelfths", "interval", "fishhook", "dumbbell", "airplane", "youthful", "bagpipes", "knuckles", "unworthy", "whizzing", "momentum", "quizzing", "zucchini"];
+// picks a random word from the words array
 const randomWord = words[Math.floor(Math.random() * words.length)];
 let letterIndex;
 let letterOutput;
 let mistakes = 0;
 let rightGuess;
-let lettersGuessed = 0;
 let mistakeOne;
 let mistakeTwo;
 let mistakeThree;
@@ -22,27 +22,7 @@ let guessWithFourMistakes = false;
 let guessWithFiveMistakes = false;
 let guessWithSixMistakes = false;
 let guessWithSevenMistakes = false;
-let letterOne = document.getElementById("l1");
-let letterTwo = document.getElementById("l2");
-let letterThree = document.getElementById("l3");
-let letterFour = document.getElementById("l4");
-let letterFive = document.getElementById("l5");
-let letterSix = document.getElementById("l6");
-let letterSeven = document.getElementById("l7");
-let letterEight = document.getElementById("l8");
-let letterNine = document.getElementById("l9");
-let letterTen = document.getElementById("l10");
 
-//
-  //function startGame() {
-    
-  //}
-// function that allows program to reload
-//function reload() {
-  // reloads window
-  //window.reload;
-  //alert("new");
-//}
 // function that evaluates the input
 function guess() {
   // sets value of myGuess variable to the input letter
@@ -96,10 +76,6 @@ function guess() {
     }
   //
     }
-    
-    //if ((letterOutput !== 0) && (letterOutput == document.getElementById("l1").innerHTML || letterOutput == document.getElementById("l2").innerHTML || letterOutput == document.getElementById("l3").innerHTML || letterOutput == document.getElementById("l4").innerHTML || letterOutput == document.getElementById("l5").innerHTML || letterOutput == document.getElementById("l6").innerHTML || letterOutput == document.getElementById("l7").innerHTML || letterOutput == document.getElementById("l8").innerHTML || letterOutput == document.getElementById("l9").innerHTML || letterOutput == document.getElementById("l10").innerHTML)) {
-      //lettersGuessed++;
-    //}
     //
     if (rightGuess == 0) {
       mistakes++;
