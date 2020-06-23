@@ -1,14 +1,13 @@
 // JavaScript File
 // let statements
 let myGuess;
-const words = ["tentacles"];
+const words = ["stalagmite"];
 const randomWord = words[Math.floor(Math.random() * words.length)];
 let letterIndex;
 let letterOutput;
-const maxMistakes = 7;
 let mistakes = 0;
 let rightGuess;
-let wrongGuess;
+let lettersGuessed = 0;
 let mistakeOne;
 let mistakeTwo;
 let mistakeThree;
@@ -23,6 +22,16 @@ let guessWithFourMistakes = false;
 let guessWithFiveMistakes = false;
 let guessWithSixMistakes = false;
 let guessWithSevenMistakes = false;
+let letterOne = document.getElementById("l1");
+let letterTwo = document.getElementById("l2");
+let letterThree = document.getElementById("l3");
+let letterFour = document.getElementById("l4");
+let letterFive = document.getElementById("l5");
+let letterSix = document.getElementById("l6");
+let letterSeven = document.getElementById("l7");
+let letterEight = document.getElementById("l8");
+let letterNine = document.getElementById("l9");
+let letterTen = document.getElementById("l10");
 
 //
   //function startGame() {
@@ -39,7 +48,6 @@ function guess() {
   // sets value of myGuess variable to the input letter
   myGuess = document.getElementById("input").value;
   rightGuess = 0;
-  wrongGuess = 0;
   // if there is no input, the user is told to type in a letter
   if (myGuess.length !== 1) {
     alert("Please enter a valid letter.");
@@ -47,17 +55,17 @@ function guess() {
   else {
   //loops through the word starting from the beginning, then from the second letter, so on so forth until it has been looped through starting from each letter
   for (let i = 0; i < randomWord.length; i++) {
-    //sets value of letterIndex to to position of the guessed letter in the word
+    // sets value of letterIndex to to position of the guessed letter in the word (-1 if not found)
     letterIndex = randomWord.indexOf(myGuess, i);
+    // if the letter was found to be in the word, the right guess count increments
     if (letterIndex > -1) {
       rightGuess++;
-      
     }
     // sets value of letterOutput to the letter in the previously found position of the hidden word
     letterOutput = randomWord.substring(letterIndex, letterIndex + 1);
     
     if (letterIndex == 0) {
-        document.getElementById("l1").innerHTML = letterOutput;
+      document.getElementById("l1").innerHTML = letterOutput;
     }
     else if (letterIndex == 1) {
       document.getElementById("l2").innerHTML = letterOutput;
@@ -87,8 +95,11 @@ function guess() {
       document.getElementById("l10").innerHTML = letterOutput;
     }
   //
-      
     }
+    
+    //if ((letterOutput !== 0) && (letterOutput == document.getElementById("l1").innerHTML || letterOutput == document.getElementById("l2").innerHTML || letterOutput == document.getElementById("l3").innerHTML || letterOutput == document.getElementById("l4").innerHTML || letterOutput == document.getElementById("l5").innerHTML || letterOutput == document.getElementById("l6").innerHTML || letterOutput == document.getElementById("l7").innerHTML || letterOutput == document.getElementById("l8").innerHTML || letterOutput == document.getElementById("l9").innerHTML || letterOutput == document.getElementById("l10").innerHTML)) {
+      //lettersGuessed++;
+    //}
     //
     if (rightGuess == 0) {
       mistakes++;
@@ -164,7 +175,35 @@ function guess() {
       
     }
       //}
-    }
+  
+  //alert(lettersGuessed);
+  
+  
+  if ((randomWord.length == 3) && (document.getElementById("l1").innerHTML.length == 1) && (document.getElementById("l2").innerHTML.length == 1) && (document.getElementById("l3").innerHTML.length == 1)) {
+    alert("You win! Try a new game with a brand new random word if you'd like.");
+  }
+  else if ((randomWord.length == 4) && (document.getElementById("l1").innerHTML.length == 1) && (document.getElementById("l2").innerHTML.length == 1) && (document.getElementById("l3").innerHTML.length == 1) && (document.getElementById("l4").innerHTML.length == 1)) {
+    alert("You win! Try a new game with a brand new random word if you'd like.");
+  }
+  else if ((randomWord.length == 5) && (document.getElementById("l1").innerHTML.length == 1) && (document.getElementById("l2").innerHTML.length == 1) && (document.getElementById("l3").innerHTML.length == 1) && (document.getElementById("l4").innerHTML.length == 1) && (document.getElementById("l5").innerHTML.length == 1)) {
+    alert("You win! Try a new game with a brand new random word if you'd like.");
+  }
+  else if ((randomWord.length == 6) && (document.getElementById("l1").innerHTML.length == 1) && (document.getElementById("l2").innerHTML.length == 1) && (document.getElementById("l3").innerHTML.length == 1) && (document.getElementById("l4").innerHTML.length == 1) && (document.getElementById("l5").innerHTML.length == 1) && (document.getElementById("l6").innerHTML.length == 1)) {
+    alert("You win! Try a new game with a brand new random word if you'd like.");
+  }
+  else if ((randomWord.length == 7) && (document.getElementById("l1").innerHTML.length == 1) && (document.getElementById("l2").innerHTML.length == 1) && (document.getElementById("l3").innerHTML.length == 1) && (document.getElementById("l4").innerHTML.length == 1) && (document.getElementById("l5").innerHTML.length == 1) && (document.getElementById("l6").innerHTML.length == 1) && (document.getElementById("l7").innerHTML.length == 1)) {
+    alert("You win! Try a new game with a brand new random word if you'd like.");
+  }
+  else if ((randomWord.length == 8) && (document.getElementById("l1").innerHTML.length == 1) && (document.getElementById("l2").innerHTML.length == 1) && (document.getElementById("l3").innerHTML.length == 1) && (document.getElementById("l4").innerHTML.length == 1) && (document.getElementById("l5").innerHTML.length == 1) && (document.getElementById("l6").innerHTML.length == 1) && (document.getElementById("l7").innerHTML.length == 1) && (document.getElementById("l8").innerHTML.length == 1)) {
+    alert("You win! Try a new game with a brand new random word if you'd like.");
+  }
+  else if ((randomWord.length == 9) && (document.getElementById("l1").innerHTML.length == 1) && (document.getElementById("l2").innerHTML.length == 1) && (document.getElementById("l3").innerHTML.length == 1) && (document.getElementById("l4").innerHTML.length == 1) && (document.getElementById("l5").innerHTML.length == 1) && (document.getElementById("l6").innerHTML.length == 1) && (document.getElementById("l7").innerHTML.length == 1) && (document.getElementById("l8").innerHTML.length == 1) && (document.getElementById("l9").innerHTML.length == 1)) {
+    alert("You win! Try a new game with a brand new random word if you'd like.");
+  }
+  else if ((randomWord.length == 10) && (document.getElementById("l1").innerHTML.length == 1) && (document.getElementById("l2").innerHTML.length == 1) && (document.getElementById("l3").innerHTML.length == 1) && (document.getElementById("l4").innerHTML.length == 1) && (document.getElementById("l5").innerHTML.length == 1) && (document.getElementById("l6").innerHTML.length == 1) && (document.getElementById("l7").innerHTML.length == 1) && (document.getElementById("l8").innerHTML.length == 1) && (document.getElementById("l9").innerHTML.length == 1) && (document.getElementById("l10").innerHTML.length == 1)){
+    alert("You win! Try a new game with a brand new random word if you'd like.");
+  }
+}
 }
 // function to change how many underscores are displayed based on letter count in word
 function underscores() {
@@ -193,6 +232,7 @@ function underscores() {
     document.getElementById("h3").innerHTML = "_ _ _ _ _ _ _ _ _ _";
   }
 }
+
 
 
 // event listener that triggers the guess function when the button is pressed
