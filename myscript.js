@@ -9,8 +9,8 @@ const words = [
   "galaxy", "oxygen", "defend", "rhythm", "zodiac", "casual", "sunset", "castle", "zombie", "phlegm", "hunter", "tragic", "island", "wrench", "charge", "menace", "reveal", "review", "unwind", "unveil",
   "discard", "prowess", "villain", "carrots", "glasses", "surface", "folding", "subject", "rhythms", "ranking", "contest", "sheilds", "archery", "creator", "plastic", "cryptic", "passage", "quickly", "reverse", "whisper",
   "scorpion", "powerful", "cupboard", "blizzard", "abruptly", "strength", "triangle", "twelfths", "interval", "fishhook", "dumbbell", "airplane", "youthful", "bagpipes", "knuckles", "unworthy", "whizzing", "momentum", "quizzing", "zucchini",
-  "pneumonia", "stonghold", "xylophone", "beekeeper", "microwave",
-  "jawbreaker", "wristwatch", "university", "sleeveless", "fulfilling"
+  "pneumonia", "xylophone", "beekeeper", "microwave",
+  "jawbreaker", "wristwatch", "university", "sleeveless", "fulfilling", "stronghold"
   ];
 // picks a random word from the words array
 const randomWord = words[Math.floor(Math.random() * words.length)];
