@@ -22,27 +22,29 @@
 .btn2 {
   position:fixed;
   left:40px;
-  bottom:40px;
+  top:700px;
+  height:60px;
+  width:180px;
 }
 .h2 {
   position:fixed;
   left:40px;
-  bottom:200px;
-}
-.h3 {
-  position:fixed;
-  left:500px;
-  bottom:100px;
-  font-size:200%;
+  top:475px;
 }
 .p {
   position:fixed;
   left:40px;
-  bottom:160px;
+  top:550px;
+}
+.h3 {
+  position:fixed;
+  left:500px;
+  top:435px;
+  font-size:200%;
 }
 .l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8, .l9, .l10 {
   position:fixed;
-  bottom:115px;
+  top:420px;
   font-size:72px;
 }
 .l1 {
@@ -78,13 +80,13 @@
 .hanger {
   position:absolute;
   top:10px;
-  right:10px;
-  border:ridge dimgray 12px;
+  left:450px;
 }
 .hangman, .hangman2, .hangman3, .hangman4, .hangman5, .hangman6, .hangman7{
   height:50%;
   position:absolute;
-  top:135px;
-  right:155px;
+  top:150px;
+  left:700px;
   display:none;
 }
+
